@@ -1,0 +1,477 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		012BA1331619B92700B5988E /* CaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 012BA1321619B92700B5988E /* CaptureViewController.m */; };
+		01B2D6231619E0E300AA074C /* RetrieveAccessTokenTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B2D6221619E0E300AA074C /* RetrieveAccessTokenTask.m */; };
+		01B444641614587400EF9356 /* RetrieveRefreshAndAccessTokenTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B444631614587400EF9356 /* RetrieveRefreshAndAccessTokenTask.m */; };
+		01B4446816147C0B00EF9356 /* AuthenticationDbService.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B4446716147C0A00EF9356 /* AuthenticationDbService.m */; };
+		01B4446B16148FE200EF9356 /* RetrieveDataResponseTypeCodeTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B4446A16148FE200EF9356 /* RetrieveDataResponseTypeCodeTask.m */; };
+		01DA8A5E161AE17F00D640C5 /* AuthenticationResponseTypeCodeTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DA8A5D161AE17F00D640C5 /* AuthenticationResponseTypeCodeTask.m */; };
+		01DA8A61161B019C00D640C5 /* LICENSE-2.0.txt in Resources */ = {isa = PBXBuildFile; fileRef = 01DA8A60161B019C00D640C5 /* LICENSE-2.0.txt */; };
+		01DA8A63161B04AD00D640C5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 01DA8A62161B04AD00D640C5 /* README.md */; };
+		01FB985815CFF8FB003139AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FB985715CFF8FB003139AF /* UIKit.framework */; };
+		01FB985A15CFF8FB003139AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FB985915CFF8FB003139AF /* Foundation.framework */; };
+		01FB985C15CFF8FB003139AF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FB985B15CFF8FB003139AF /* CoreGraphics.framework */; };
+		01FB986215CFF8FB003139AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01FB986015CFF8FB003139AF /* InfoPlist.strings */; };
+		01FB986415CFF8FB003139AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FB986315CFF8FB003139AF /* main.m */; };
+		01FB986815CFF8FB003139AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FB986715CFF8FB003139AF /* AppDelegate.m */; };
+		01FB986B15CFF8FB003139AF /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01FB986915CFF8FB003139AF /* MainStoryboard_iPhone.storyboard */; };
+		01FB986E15CFF8FB003139AF /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01FB986C15CFF8FB003139AF /* MainStoryboard_iPad.storyboard */; };
+		01FB987115CFF8FB003139AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FB987015CFF8FB003139AF /* ViewController.m */; };
+		01FB987915CFF8FB003139AF /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FB987815CFF8FB003139AF /* SenTestingKit.framework */; };
+		01FB987A15CFF8FB003139AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FB985715CFF8FB003139AF /* UIKit.framework */; };
+		01FB987B15CFF8FB003139AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FB985915CFF8FB003139AF /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		01FB987C15CFF8FB003139AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01FB984A15CFF8FB003139AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01FB985215CFF8FB003139AF;
+			remoteInfo = SURFnetConextIOSClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		012BA1311619B92700B5988E /* CaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureViewController.h; sourceTree = "<group>"; };
+		012BA1321619B92700B5988E /* CaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureViewController.m; sourceTree = "<group>"; };
+		01B2D6211619E0E300AA074C /* RetrieveAccessTokenTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RetrieveAccessTokenTask.h; path = tasks/RetrieveAccessTokenTask.h; sourceTree = "<group>"; };
+		01B2D6221619E0E300AA074C /* RetrieveAccessTokenTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RetrieveAccessTokenTask.m; path = tasks/RetrieveAccessTokenTask.m; sourceTree = "<group>"; };
+		01B444621614587400EF9356 /* RetrieveRefreshAndAccessTokenTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RetrieveRefreshAndAccessTokenTask.h; path = tasks/RetrieveRefreshAndAccessTokenTask.h; sourceTree = "<group>"; };
+		01B444631614587400EF9356 /* RetrieveRefreshAndAccessTokenTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RetrieveRefreshAndAccessTokenTask.m; path = tasks/RetrieveRefreshAndAccessTokenTask.m; sourceTree = "<group>"; };
+		01B4446616147C0A00EF9356 /* AuthenticationDbService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationDbService.h; sourceTree = "<group>"; };
+		01B4446716147C0A00EF9356 /* AuthenticationDbService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthenticationDbService.m; sourceTree = "<group>"; };
+		01B4446916148FE100EF9356 /* RetrieveDataResponseTypeCodeTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RetrieveDataResponseTypeCodeTask.h; path = tasks/RetrieveDataResponseTypeCodeTask.h; sourceTree = "<group>"; };
+		01B4446A16148FE200EF9356 /* RetrieveDataResponseTypeCodeTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RetrieveDataResponseTypeCodeTask.m; path = tasks/RetrieveDataResponseTypeCodeTask.m; sourceTree = "<group>"; };
+		01DA8A5C161AE17F00D640C5 /* AuthenticationResponseTypeCodeTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AuthenticationResponseTypeCodeTask.h; path = tasks/AuthenticationResponseTypeCodeTask.h; sourceTree = "<group>"; };
+		01DA8A5D161AE17F00D640C5 /* AuthenticationResponseTypeCodeTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AuthenticationResponseTypeCodeTask.m; path = tasks/AuthenticationResponseTypeCodeTask.m; sourceTree = "<group>"; };
+		01DA8A60161B019C00D640C5 /* LICENSE-2.0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "LICENSE-2.0.txt"; sourceTree = "<group>"; };
+		01DA8A62161B04AD00D640C5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		01FB985315CFF8FB003139AF /* SURFnetConextIOSClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SURFnetConextIOSClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01FB985715CFF8FB003139AF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		01FB985915CFF8FB003139AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		01FB985B15CFF8FB003139AF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		01FB985F15CFF8FB003139AF /* SURFnetConextIOSClient-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SURFnetConextIOSClient-Info.plist"; sourceTree = "<group>"; };
+		01FB986115CFF8FB003139AF /* en */ = {isa = PBXFileReference; explicitFileType = text.plist; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		01FB986315CFF8FB003139AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		01FB986515CFF8FB003139AF /* SURFnetConextIOSClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SURFnetConextIOSClient-Prefix.pch"; sourceTree = "<group>"; };
+		01FB986615CFF8FB003139AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		01FB986715CFF8FB003139AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		01FB986A15CFF8FB003139AF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		01FB986D15CFF8FB003139AF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		01FB986F15CFF8FB003139AF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		01FB987015CFF8FB003139AF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		01FB987715CFF8FB003139AF /* SURFnetConextIOSClientTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SURFnetConextIOSClientTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		01FB987815CFF8FB003139AF /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		01FB985015CFF8FB003139AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01FB985815CFF8FB003139AF /* UIKit.framework in Frameworks */,
+				01FB985A15CFF8FB003139AF /* Foundation.framework in Frameworks */,
+				01FB985C15CFF8FB003139AF /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01FB987315CFF8FB003139AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01FB987915CFF8FB003139AF /* SenTestingKit.framework in Frameworks */,
+				01FB987A15CFF8FB003139AF /* UIKit.framework in Frameworks */,
+				01FB987B15CFF8FB003139AF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01B4446C16148FF600EF9356 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				01B444621614587400EF9356 /* RetrieveRefreshAndAccessTokenTask.h */,
+				01B444631614587400EF9356 /* RetrieveRefreshAndAccessTokenTask.m */,
+				01B4446916148FE100EF9356 /* RetrieveDataResponseTypeCodeTask.h */,
+				01B4446A16148FE200EF9356 /* RetrieveDataResponseTypeCodeTask.m */,
+				01B2D6211619E0E300AA074C /* RetrieveAccessTokenTask.h */,
+				01B2D6221619E0E300AA074C /* RetrieveAccessTokenTask.m */,
+				01DA8A5C161AE17F00D640C5 /* AuthenticationResponseTypeCodeTask.h */,
+				01DA8A5D161AE17F00D640C5 /* AuthenticationResponseTypeCodeTask.m */,
+			);
+			name = Tasks;
+			sourceTree = "<group>";
+		};
+		01FB984815CFF8FB003139AF = {
+			isa = PBXGroup;
+			children = (
+				01DA8A62161B04AD00D640C5 /* README.md */,
+				01FB985D15CFF8FB003139AF /* SURFnetConextIOSClient */,
+				01FB985615CFF8FB003139AF /* Frameworks */,
+				01FB985415CFF8FB003139AF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		01FB985415CFF8FB003139AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01FB985315CFF8FB003139AF /* SURFnetConextIOSClient.app */,
+				01FB987715CFF8FB003139AF /* SURFnetConextIOSClientTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		01FB985615CFF8FB003139AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01FB985715CFF8FB003139AF /* UIKit.framework */,
+				01FB985915CFF8FB003139AF /* Foundation.framework */,
+				01FB985B15CFF8FB003139AF /* CoreGraphics.framework */,
+				01FB987815CFF8FB003139AF /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		01FB985D15CFF8FB003139AF /* SURFnetConextIOSClient */ = {
+			isa = PBXGroup;
+			children = (
+				01FB986615CFF8FB003139AF /* AppDelegate.h */,
+				01FB986715CFF8FB003139AF /* AppDelegate.m */,
+				01FB986915CFF8FB003139AF /* MainStoryboard_iPhone.storyboard */,
+				01FB986C15CFF8FB003139AF /* MainStoryboard_iPad.storyboard */,
+				01FB986F15CFF8FB003139AF /* ViewController.h */,
+				01FB987015CFF8FB003139AF /* ViewController.m */,
+				01FB985E15CFF8FB003139AF /* Supporting Files */,
+				01B4446C16148FF600EF9356 /* Tasks */,
+				01B4446616147C0A00EF9356 /* AuthenticationDbService.h */,
+				01B4446716147C0A00EF9356 /* AuthenticationDbService.m */,
+				012BA1311619B92700B5988E /* CaptureViewController.h */,
+				012BA1321619B92700B5988E /* CaptureViewController.m */,
+				01DA8A60161B019C00D640C5 /* LICENSE-2.0.txt */,
+			);
+			path = SURFnetConextIOSClient;
+			sourceTree = "<group>";
+		};
+		01FB985E15CFF8FB003139AF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				01FB985F15CFF8FB003139AF /* SURFnetConextIOSClient-Info.plist */,
+				01FB986015CFF8FB003139AF /* InfoPlist.strings */,
+				01FB986315CFF8FB003139AF /* main.m */,
+				01FB986515CFF8FB003139AF /* SURFnetConextIOSClient-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		01FB985215CFF8FB003139AF /* SURFnetConextIOSClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01FB988915CFF8FB003139AF /* Build configuration list for PBXNativeTarget "SURFnetConextIOSClient" */;
+			buildPhases = (
+				01FB984F15CFF8FB003139AF /* Sources */,
+				01FB985015CFF8FB003139AF /* Frameworks */,
+				01FB985115CFF8FB003139AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SURFnetConextIOSClient;
+			productName = SURFnetConextIOSClient;
+			productReference = 01FB985315CFF8FB003139AF /* SURFnetConextIOSClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+		01FB987615CFF8FB003139AF /* SURFnetConextIOSClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01FB988C15CFF8FB003139AF /* Build configuration list for PBXNativeTarget "SURFnetConextIOSClientTests" */;
+			buildPhases = (
+				01FB987215CFF8FB003139AF /* Sources */,
+				01FB987315CFF8FB003139AF /* Frameworks */,
+				01FB987415CFF8FB003139AF /* Resources */,
+				01FB987515CFF8FB003139AF /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				01FB987D15CFF8FB003139AF /* PBXTargetDependency */,
+			);
+			name = SURFnetConextIOSClientTests;
+			productName = SURFnetConextIOSClientTests;
+			productReference = 01FB987715CFF8FB003139AF /* SURFnetConextIOSClientTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		01FB984A15CFF8FB003139AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = iPROFS;
+			};
+			buildConfigurationList = 01FB984D15CFF8FB003139AF /* Build configuration list for PBXProject "SURFnetConextIOSClient" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 01FB984815CFF8FB003139AF;
+			productRefGroup = 01FB985415CFF8FB003139AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				01FB985215CFF8FB003139AF /* SURFnetConextIOSClient */,
+				01FB987615CFF8FB003139AF /* SURFnetConextIOSClientTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		01FB985115CFF8FB003139AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01FB986215CFF8FB003139AF /* InfoPlist.strings in Resources */,
+				01FB986B15CFF8FB003139AF /* MainStoryboard_iPhone.storyboard in Resources */,
+				01FB986E15CFF8FB003139AF /* MainStoryboard_iPad.storyboard in Resources */,
+				01DA8A61161B019C00D640C5 /* LICENSE-2.0.txt in Resources */,
+				01DA8A63161B04AD00D640C5 /* README.md in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01FB987415CFF8FB003139AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01FB987515CFF8FB003139AF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		01FB984F15CFF8FB003139AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01FB986415CFF8FB003139AF /* main.m in Sources */,
+				01FB986815CFF8FB003139AF /* AppDelegate.m in Sources */,
+				01FB987115CFF8FB003139AF /* ViewController.m in Sources */,
+				01B444641614587400EF9356 /* RetrieveRefreshAndAccessTokenTask.m in Sources */,
+				01B4446816147C0B00EF9356 /* AuthenticationDbService.m in Sources */,
+				01B4446B16148FE200EF9356 /* RetrieveDataResponseTypeCodeTask.m in Sources */,
+				012BA1331619B92700B5988E /* CaptureViewController.m in Sources */,
+				01B2D6231619E0E300AA074C /* RetrieveAccessTokenTask.m in Sources */,
+				01DA8A5E161AE17F00D640C5 /* AuthenticationResponseTypeCodeTask.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01FB987215CFF8FB003139AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		01FB987D15CFF8FB003139AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01FB985215CFF8FB003139AF /* SURFnetConextIOSClient */;
+			targetProxy = 01FB987C15CFF8FB003139AF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		01FB986015CFF8FB003139AF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01FB986115CFF8FB003139AF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		01FB986915CFF8FB003139AF /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01FB986A15CFF8FB003139AF /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		01FB986C15CFF8FB003139AF /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01FB986D15CFF8FB003139AF /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		01FB988715CFF8FB003139AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		01FB988815CFF8FB003139AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		01FB988A15CFF8FB003139AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SURFnetConextIOSClient/SURFnetConextIOSClient-Prefix.pch";
+				INFOPLIST_FILE = "SURFnetConextIOSClient/SURFnetConextIOSClient-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		01FB988B15CFF8FB003139AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SURFnetConextIOSClient/SURFnetConextIOSClient-Prefix.pch";
+				INFOPLIST_FILE = "SURFnetConextIOSClient/SURFnetConextIOSClient-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		01FB988D15CFF8FB003139AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SURFnetConextIOSClient.app/SURFnetConextIOSClient";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SURFnetConextIOSClient/SURFnetConextIOSClient-Prefix.pch";
+				INFOPLIST_FILE = "SURFnetConextIOSClientTests/SURFnetConextIOSClientTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		01FB988E15CFF8FB003139AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SURFnetConextIOSClient.app/SURFnetConextIOSClient";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SURFnetConextIOSClient/SURFnetConextIOSClient-Prefix.pch";
+				INFOPLIST_FILE = "SURFnetConextIOSClientTests/SURFnetConextIOSClientTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		01FB984D15CFF8FB003139AF /* Build configuration list for PBXProject "SURFnetConextIOSClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01FB988715CFF8FB003139AF /* Debug */,
+				01FB988815CFF8FB003139AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01FB988915CFF8FB003139AF /* Build configuration list for PBXNativeTarget "SURFnetConextIOSClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01FB988A15CFF8FB003139AF /* Debug */,
+				01FB988B15CFF8FB003139AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01FB988C15CFF8FB003139AF /* Build configuration list for PBXNativeTarget "SURFnetConextIOSClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01FB988D15CFF8FB003139AF /* Debug */,
+				01FB988E15CFF8FB003139AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 01FB984A15CFF8FB003139AF /* Project object */;
+}
