@@ -175,7 +175,7 @@ static AuthenticationDbService *sharedInstance = nil;
 
 - (BOOL) isDebugLogEnabled
 {
-    NSString *level = (NSString*)[demoProperties objectForKey:@"webservice_url"];
+    NSString *level = (NSString*)[demoProperties objectForKey:@"logging"];
     if ([level isEqualToString:@"debug"]) {
         return TRUE;
     }
@@ -185,7 +185,7 @@ static AuthenticationDbService *sharedInstance = nil;
 
 - (BOOL) isTraceLogEnabled
 {
-    NSString *level = (NSString*)[demoProperties objectForKey:@"webservice_url"];
+    NSString *level = (NSString*)[demoProperties objectForKey:@"logging"];
     if ([level isEqualToString:@"trace"]) {
         return TRUE;
     }
