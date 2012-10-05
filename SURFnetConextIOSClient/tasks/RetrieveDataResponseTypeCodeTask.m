@@ -38,9 +38,10 @@
 
 - (void)executeRetrieveTask
 {
-    NSLog(@"Trying to connect to %@", self.getUrl);
-    
     AuthenticationDbService * dbService = [AuthenticationDbService sharedInstance];
+    if (dbService.isDebugLogEnabled) {
+        NSLog(@"Trying to connect to %@", self.getUrl);
+    }
     
     NSMutableURLRequest *theRequest=[NSMutableURLRequest requestWithURL:[NSURL URLWithString:self.getUrl]
                                                             cachePolicy:NSURLRequestUseProtocolCachePolicy
@@ -61,16 +62,22 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
-    NSLog(@"didReceiveResponse");
+    AuthenticationDbService * dbService = [AuthenticationDbService sharedInstance];
+    if (dbService.isTraceLogEnabled) {
+        NSLog(@"didReceiveResponse");
+    }
     if ([response isKindOfClass:[NSHTTPURLResponse class]])
     {
         NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse*) response; 
-        NSLog(@"http statuscode = %i", [httpResponse statusCode]);
-        
+        if (dbService.isDebugLogEnabled) {
+            NSLog(@"http statuscode = %i", [httpResponse statusCode]);
+        }
         int statusCode = [httpResponse statusCode];
         if (statusCode != 200) {
             [connection cancel];
-            NSLog(@"retrieve new tokens");
+            if (dbService.isTraceLogEnabled) {
+                NSLog(@"retrieve new tokens");
+            }
             AuthenticationDbService * dbService = [AuthenticationDbService sharedInstance];
             [dbService addData:@"retrieve new tokens\n"];
             if ([dbService getRefreshToken] != nil) {
@@ -91,15 +98,20 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
-    NSLog(@"didReceiveData");
-    
+    AuthenticationDbService * dbService = [AuthenticationDbService sharedInstance];
+    if (dbService.isTraceLogEnabled) {
+        NSLog(@"didReceiveData");
+    }
     [receivedData appendData:data];
 }
 
 - (void)connection:(NSURLConnection *)connection
   didFailWithError:(NSError *)error
 {
-    NSLog(@"didFailWithError");
+    AuthenticationDbService * dbService = [AuthenticationDbService sharedInstance];
+    if (dbService.isTraceLogEnabled) {
+        NSLog(@"didFailWithError");
+    }
     
     // inform the user
     NSLog(@"Connection failed! Error - %@ %@",
@@ -109,8 +121,10 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    NSLog(@"connectionDidFinishLoading");
-    
+    AuthenticationDbService * dbService = [AuthenticationDbService sharedInstance];
+    if (dbService.isTraceLogEnabled) {
+        NSLog(@"connectionDidFinishLoading");
+    }
     NSError* error;
     
     NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:receivedData options:kNilOptions error:&error];
@@ -118,8 +132,7 @@
     NSString *str = [dictionary description];
     NSString *truncatedString = [str substringToIndex:[str length]-1];
     NSString * finalTruncatedString = [truncatedString substringFromIndex:1];
-    
-    AuthenticationDbService * dbService = [AuthenticationDbService sharedInstance];
+
     [dbService addData:finalTruncatedString];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"ResultViewUpdate" object:nil];

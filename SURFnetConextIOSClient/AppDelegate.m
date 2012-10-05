@@ -44,15 +44,17 @@
     NSString *scheme = [dbService getScheme];
     
     if ([[ url scheme] isEqualToString:scheme] ) {
-        NSLog(@"found %@", scheme);
-        
+        if (dbService.isDebugLogEnabled) {
+            NSLog(@"found %@", scheme);
+        }
         AuthenticationDbService * dbService = [AuthenticationDbService sharedInstance];
         
         NSString *text = [url absoluteString];
 
         if ([[ dbService getResponseType] isEqualToString:@"code"]) {
-            
-            NSLog(@"Response type = code");
+            if (dbService.isTraceLogEnabled) {
+                NSLog(@"Response type = code");
+            }
             NSArray *param_s = [text componentsSeparatedByString:@"?"];
             NSString *param_1 = [param_s objectAtIndex:1];
             
@@ -68,8 +70,9 @@
                     [result setObject:value forKey:key];
                 }
             }
-            NSLog(@"code = %@", [result objectForKey:@"code"]);
-            
+            if (dbService.isDebugLogEnabled) {
+                NSLog(@"code = %@", [result objectForKey:@"code"]);
+            }
             AuthenticationDbService * dbService = [AuthenticationDbService sharedInstance];
             [dbService setAuthorizationCode:[result objectForKey:@"code"]];
             

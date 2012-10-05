@@ -24,7 +24,6 @@
 
 @implementation RetrieveRefreshAndAccessTokenTask
 
-
 - (NSString*)getUrl
 {
     AuthenticationDbService * dbService = [AuthenticationDbService sharedInstance];
@@ -56,9 +55,11 @@
 
 - (void)executeRetrieveTask
 {
-    NSLog(@"Trying to connect to %@", self.getUrl);
-    NSLog(@"Trying to connect with %@", self.getParameters);
-
+    AuthenticationDbService * dbService = [AuthenticationDbService sharedInstance];
+    if (dbService.isDebugLogEnabled) {
+        NSLog(@"Trying to connect to %@", self.getUrl);
+        NSLog(@"Trying to connect with %@", self.getParameters);
+    }
     NSMutableURLRequest *theRequest=[NSMutableURLRequest requestWithURL:[NSURL URLWithString:self.getUrl]
                                           cachePolicy:NSURLRequestUseProtocolCachePolicy
                                       timeoutInterval:60.0];
@@ -77,12 +78,17 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
-    NSLog(@"didReceiveResponse");
+    AuthenticationDbService * dbService = [AuthenticationDbService sharedInstance];
+    if (dbService.isTraceLogEnabled) {
+        NSLog(@"didReceiveResponse");
+    }
     if ([response isKindOfClass:[NSHTTPURLResponse class]])
     {
-        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse*) response; 
-        NSLog(@"response1 = %i", [httpResponse statusCode]);
-        NSLog(@"response2 = %@", [httpResponse allHeaderFields]);
+        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse*) response;
+        if (dbService.isDebugLogEnabled) {
+            NSLog(@"response1 = %i", [httpResponse statusCode]);
+            NSLog(@"response2 = %@", [httpResponse allHeaderFields]);
+        }
     }
     
     [receivedData setLength:0];
@@ -90,15 +96,20 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
-    NSLog(@"didReceiveData");
-
+    AuthenticationDbService * dbService = [AuthenticationDbService sharedInstance];
+    if (dbService.isTraceLogEnabled) {
+        NSLog(@"didReceiveData");
+    }
     [receivedData appendData:data];
 }
 
 - (void)connection:(NSURLConnection *)connection
   didFailWithError:(NSError *)error
 {
-    NSLog(@"didFailWithError");
+    AuthenticationDbService * dbService = [AuthenticationDbService sharedInstance];
+    if (dbService.isTraceLogEnabled) {
+        NSLog(@"didFailWithError");
+    }
     
     // inform the user
     NSLog(@"Connection failed! Error - %@ %@",
@@ -108,37 +119,48 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    NSLog(@"connectionDidFinishLoading");
-    
+    AuthenticationDbService * dbService = [AuthenticationDbService sharedInstance];
+    if (dbService.isTraceLogEnabled) {
+        NSLog(@"connectionDidFinishLoading");
+    }
     NSError* error;
     
     NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:receivedData options:kNilOptions error:&error];
     
-    AuthenticationDbService * dbService = [AuthenticationDbService sharedInstance];
-    
     NSString * access_token = [dictionary objectForKey:@"access_token"];
-    NSLog(@"access_token = %@", access_token);
+    if (dbService.isDebugLogEnabled) {
+        NSLog(@"access_token = %@", access_token);
+    }
     [dbService setAccessToken:access_token];
     
     NSString * token_type = [dictionary objectForKey:@"token_type"];
-    NSLog(@"token_type = %@", token_type);
+    if (dbService.isDebugLogEnabled) {
+        NSLog(@"token_type = %@", token_type);
+    }
     [dbService setTokenType:token_type];
     
     NSString * refresh_token = [dictionary objectForKey:@"refresh_token"];
     if (refresh_token != nil) {
-        NSLog(@"refresh_token = %@", refresh_token);
+        if (dbService.isDebugLogEnabled) {
+            NSLog(@"refresh_token = %@", refresh_token);
+        }
         [dbService setRefreshToken:refresh_token];
     }
     
     int expires_in = (int)[dictionary objectForKey:@"expires_in"];
     if (expires_in != 0) {
-        NSLog(@"expires_in = %@", expires_in);
-        [dbService setExpiresIn:expires_in];
+        if (dbService.isDebugLogEnabled) {
+            NSLog(@"expires_in = %@", expires_in);
+        }
+        NSInteger expiresin = [[NSNumber numberWithInt:expires_in] integerValue];
+        [dbService setExpiresIn:(NSInteger*)expiresin];
     }
     
     NSString * scope = [dictionary objectForKey:@"scope"];
     if (scope != nil) {
-        NSLog(@"scope = %@", scope);
+        if (dbService.isDebugLogEnabled) {
+            NSLog(@"scope = %@", scope);
+        }
     }
 
     RetrieveDataResponseTypeCodeTask *task = [[RetrieveDataResponseTypeCodeTask alloc] init];

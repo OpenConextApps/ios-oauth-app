@@ -65,4 +65,8 @@
 - (void) addData:(NSString*)newdata;
 - (NSString*) resetData;
 
+
+- (BOOL) isDebugLogEnabled;
+- (BOOL) isTraceLogEnabled;
+
 @end

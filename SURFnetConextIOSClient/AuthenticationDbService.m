@@ -49,7 +49,8 @@ static AuthenticationDbService *sharedInstance = nil;
                          @"oauth-mobile-app://callback", @"authorize_redirect_uri", 
                          @"https://frko.surfnetlabs.nl/php-oauth/token.php", @"token_url", 
                          @"authorization_code", @"token_grant_type", 
-                         @"https://frko.surfnetlabs.nl/php-summerschool/api.php/grades/@me", @"webservice_url", 
+                         @"https://frko.surfnetlabs.nl/php-summerschool/api.php/grades/@me", @"webservice_url",
+                         @"trace", @"logging",
          nil];
      
     }
@@ -171,5 +172,23 @@ static AuthenticationDbService *sharedInstance = nil;
     return _data;
 }
                   
-                  
+
+- (BOOL) isDebugLogEnabled
+{
+    NSString *level = (NSString*)[demoProperties objectForKey:@"webservice_url"];
+    if ([level isEqualToString:@"debug"]) {
+        return TRUE;
+    }
+    
+    return self.isTraceLogEnabled;
+}
+
+- (BOOL) isTraceLogEnabled
+{
+    NSString *level = (NSString*)[demoProperties objectForKey:@"webservice_url"];
+    if ([level isEqualToString:@"trace"]) {
+        return TRUE;
+    }
+    return FALSE;
+}
 @end
