@@ -41,15 +41,15 @@ static AuthenticationDbService *sharedInstance = nil;
         
         demoProperties = [NSDictionary dictionaryWithObjectsAndKeys: 
                          @"oauth-mobile-app", @"scheme",
-                         @"https://frko.surfnetlabs.nl/php-oauth/authorize.php", @"authorize_url", 
+                         @"https://frko.surfnetlabs.nl/workshop/php-oauth/authorize.php", @"authorize_url", 
                          @"code", @"authorize_response_type", 
                           @"authorization_code", @"authorize_grant_type",
                          @"oauth-mobile-app", @"authorize_client_id", 
                          @"grades", @"authorize_scope", 
                          @"oauth-mobile-app://callback", @"authorize_redirect_uri", 
-                         @"https://frko.surfnetlabs.nl/php-oauth/token.php", @"token_url", 
+                         @"https://frko.surfnetlabs.nl/workshop/php-oauth/token.php", @"token_url", 
                          @"authorization_code", @"token_grant_type", 
-                         @"https://frko.surfnetlabs.nl/php-summerschool/api.php/grades/@me", @"webservice_url",
+                         @"https://frko.surfnetlabs.nl/workshop/php-oauth-grades-rs/api.php/grades/@me", @"webservice_url",
                          @"trace", @"logging",
          nil];
      
